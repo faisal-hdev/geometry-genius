@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="cupcake">
+<html lang="en" data-theme="dark, light, cupcake">
   <!-- data-theme="coffee" -->
   <head>
     <meta charset="UTF-8" />
@@ -189,11 +189,17 @@
             <div class="card-body items-center text-center space-y-5">
               <h2 class="card-title text-2xl">Pentagon</h2>
               <p>Area = 0.5 X b X h</p>
+              <div>
+                <p class="text-xl">
+                  Area : <span id="pentagon-area">0</span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+              </div>
               <div class="flex gap-3">
                 <input
                   class="w-24 p-2 rounded-md bg-slate-100"
                   type="text"
-                  placeholder="p"
+                  placeholder="perimeter"
                   name=""
                   id="pentagon-perimeter"
                 />
@@ -201,7 +207,7 @@
                 <input
                   class="w-24 p-2 rounded-md bg-slate-100"
                   type="text"
-                  placeholder="b"
+                  placeholder="apothem"
                   name=""
                   id="pentagon-apothem"
                 />
@@ -209,6 +215,7 @@
               </div>
               <div class="card-actions">
                 <button
+                  onclick="calculatePentagonArea()"
                   class="bg-[#1090D8] hover:bg-[#3eb8ff] py-3 px-16 text-base rounded-lg font-medium text-white"
                 >
                   Calculate
@@ -216,26 +223,35 @@
               </div>
             </div>
           </div>
+          <!-- Ellipse -->
           <div class="card bg-base-100 shadow-md border">
             <figure class="px-10 pt-10">
               <img src="./images/Ellipse.png" alt="Shoes" />
             </figure>
             <div class="card-body items-center text-center space-y-5">
               <h2 class="card-title text-2xl">Ellipse</h2>
-              <p>Area (A) = 0.5 X b X h</p>
+              <p>Area = π X b X h</p>
+              <div>
+                <p class="text-xl">
+                  Area : <span id="ellipse-area">0</span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+              </div>
               <div class="flex gap-3">
                 <input
+                  id="ellipse-major-radius"
                   class="w-24 p-2 rounded-md bg-slate-100"
                   type="text"
-                  placeholder="b"
+                  placeholder="major"
                   name=""
                   id=""
                 />
                 <span class="flex items-center">cm</span>
                 <input
+                  id="ellipse-minor-radius"
                   class="w-24 p-2 rounded-md bg-slate-100"
                   type="text"
-                  placeholder="h"
+                  placeholder="minor"
                   name=""
                   id=""
                 />
@@ -243,6 +259,7 @@
               </div>
               <div class="card-actions">
                 <button
+                  onclick="calculateEllipseArea()"
                   class="bg-[#1090D8] hover:bg-[#3eb8ff] py-3 px-16 text-base rounded-lg font-medium text-white"
                 >
                   Calculate
@@ -265,5 +282,7 @@
     <script src="./js/taiangle-calculate.js"></script>
     <script src="./js/rectangle-area.js"></script>
     <script src="./js/parallelogram-area.js"></script>
+    <script src="./js/pentagon-area.js"></script>
+    <script src="./js/eleips-area.js"></script>
   </body>
 </html>
