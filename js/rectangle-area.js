@@ -1,13 +1,13 @@
 function calculateRectangleArea() {
-  // get length,width of the triangle
+  //  Access to the input field by getElementById
   const lengthInput = document.getElementById("rectangle-length");
   const widthInput = document.getElementById("rectangle-width");
 
-  // get length,width value of the triangle
+  // get get value form input field
   const lengthText = lengthInput.value;
   const widthText = widthInput.value;
 
-  // set to the convert parsFloat value
+  // Convert the value to a number. use parsFloat
   const length = parseFloat(lengthText);
   const width = parseFloat(widthText);
 

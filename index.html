@@ -105,33 +105,41 @@
               </div>
             </div>
           </div>
+          <!-- Parallelogram -->
           <div class="card bg-base-100 shadow-md border">
             <figure class="px-10 pt-10">
               <img src="./images/parallelogram.png" alt="Shoes" />
             </figure>
             <div class="card-body items-center text-center space-y-5">
               <h2 class="card-title text-2xl">Parallelogram</h2>
-              <p>Area (A) = 0.5 X b X h</p>
+              <p>Area (A) = b X h</p>
+              <div>
+                <p class="text-xl">
+                  Area : <span id="parallelogram-area">0</span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+              </div>
               <div class="flex gap-3">
                 <input
                   class="w-24 p-2 rounded-md bg-slate-100"
                   type="text"
-                  placeholder="b"
+                  placeholder="base"
                   name=""
-                  id=""
+                  id="parallelogram-base"
                 />
                 <span class="flex items-center">cm</span>
                 <input
                   class="w-24 p-2 rounded-md bg-slate-100"
                   type="text"
-                  placeholder="h"
+                  placeholder="hight"
                   name=""
-                  id=""
+                  id="parallelogram-hight"
                 />
                 <span class="flex items-center">cm</span>
               </div>
               <div class="card-actions">
                 <button
+                  onclick="calculateParallelogramArea()"
                   class="bg-[#1090D8] hover:bg-[#3eb8ff] py-3 px-16 text-base rounded-lg font-medium text-white"
                 >
                   Calculate
@@ -173,28 +181,29 @@
               </div>
             </div>
           </div>
+          <!-- Pentagon -->
           <div class="card bg-base-100 shadow-md border">
             <figure class="px-10 pt-10">
               <img src="./images/pentagon.png" alt="Shoes" />
             </figure>
             <div class="card-body items-center text-center space-y-5">
               <h2 class="card-title text-2xl">Pentagon</h2>
-              <p>Area (A) = 0.5 X b X h</p>
+              <p>Area = 0.5 X b X h</p>
               <div class="flex gap-3">
                 <input
                   class="w-24 p-2 rounded-md bg-slate-100"
                   type="text"
-                  placeholder="b"
+                  placeholder="p"
                   name=""
-                  id=""
+                  id="pentagon-perimeter"
                 />
                 <span class="flex items-center">cm</span>
                 <input
                   class="w-24 p-2 rounded-md bg-slate-100"
                   type="text"
-                  placeholder="h"
+                  placeholder="b"
                   name=""
-                  id=""
+                  id="pentagon-apothem"
                 />
                 <span class="flex items-center">cm</span>
               </div>
@@ -255,5 +264,6 @@
     </footer>
     <script src="./js/taiangle-calculate.js"></script>
     <script src="./js/rectangle-area.js"></script>
+    <script src="./js/parallelogram-area.js"></script>
   </body>
 </html>
