@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="cupcake">
+  <!-- data-theme="coffee" -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,19 +27,27 @@
             <div class="card-body items-center text-center space-y-5">
               <h2 class="card-title text-2xl">Triangle</h2>
               <p>Area (A) = 0.5 X b X h</p>
+              <div>
+                <p class="text-xl">
+                  Area : <span id="triangle-area">0</span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+              </div>
               <div class="flex gap-3">
                 <input
+                  id="triangle-base"
                   class="w-24 p-2 rounded-md bg-slate-100"
                   type="text"
-                  placeholder="b"
+                  placeholder="base"
                   name=""
                   id=""
                 />
                 <span class="flex items-center">cm</span>
                 <input
+                  id="triangle-hight"
                   class="w-24 p-2 rounded-md bg-slate-100"
                   type="text"
-                  placeholder="h"
+                  placeholder="hight"
                   name=""
                   id=""
                 />
@@ -46,6 +55,7 @@
               </div>
               <div class="card-actions">
                 <button
+                  onclick="calculateTriangleArea()"
                   class="bg-[#1090D8] hover:bg-[#3eb8ff] py-3 px-16 text-base rounded-lg font-medium text-white"
                 >
                   Calculate
@@ -53,26 +63,35 @@
               </div>
             </div>
           </div>
+          <!-- Rectangle -->
           <div class="card bg-base-100 shadow-md border">
             <figure class="px-10 pt-10">
               <img src="./images/rectangle.png" alt="Shoes" />
             </figure>
             <div class="card-body items-center text-center space-y-5">
               <h2 class="card-title text-2xl">Rectangle</h2>
-              <p>Area (A) = w X I</p>
+              <p>Area (A) = w X l</p>
+              <div>
+                <p class="text-xl">
+                  Area : <span id="triangle-area">0</span>
+                  <span>cm<sup>2</sup></span>
+                </p>
+              </div>
               <div class="flex gap-3">
                 <input
+                  id=""
                   class="w-24 p-2 rounded-md bg-slate-100"
                   type="text"
-                  placeholder="w"
+                  placeholder="width"
                   name=""
                   id=""
                 />
                 <span class="flex items-center">cm</span>
                 <input
+                  id=""
                   class="w-24 p-2 rounded-md bg-slate-100"
                   type="text"
-                  placeholder="I"
+                  placeholder="length"
                   name=""
                   id=""
                 />
@@ -80,6 +99,7 @@
               </div>
               <div class="card-actions">
                 <button
+                  onclick="calculateRectangleArea()"
                   class="bg-[#1090D8] hover:bg-[#3eb8ff] py-3 px-16 text-base rounded-lg font-medium text-white"
                 >
                   Calculate
@@ -225,10 +245,17 @@
           </div>
         </div>
         <!-- Aria Calculation container -->
-        <div class="w-[440px] text-center card bg-base-100 shadow-md border">
-          <h3 class="text-xl underline mt-6">Area Calculation</h3>
+        <div
+          class="w-full md:w-60 lg:w-96 text-center card bg-base-100 shadow-md border"
+        >
+          <h3 class="text-xl underline my-6">Area Calculation</h3>
         </div>
       </div>
     </main>
+    <footer class="text-center my-14 opacity-75">
+      <p><small>CopyRight by FaisalH-2024</small></p>
+    </footer>
+    <script src="./js/taiangle-calculate.js"></script>
+    <script src="./js/rectangle-area.js"></script>
   </body>
 </html>
